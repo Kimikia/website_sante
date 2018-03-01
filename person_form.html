@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>La santé aujourd'hui </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Santé</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ajoute Tes stats</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container">
+            <h2 class="masthead-subheading mb-0">Ajoute tes stats</h2>
+        </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+
+
+<section>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="mt-5 m-md-5 col-md-8">
+                <!-- Card -->
+                <div class="card">
+
+                    <!-- Card body -->
+                    <div class="card-body">
+
+                        <!-- Default form contact -->
+                        <form action="create_person.php" method="post">
+                            <p class="h4 text-center mb-4">Mes Informations</p>
+
+                            <!-- Default input name -->
+                            <label for="nameField" class="grey-text">Ton nom</label>
+                            <input type="text" required name="name" id="nameField" class="form-control">
+
+                            <br>
+
+                            <!-- Default input email -->
+                            <label for="ageField" class="grey-text">Ton age</label>
+                            <input type="number" required pattern="[0-9]" max="76" min="6" name="age" id="ageField"
+                                   class="form-control">
+                            <br>
+
+                            <!--Sex -->
+                            <label for="sexField" class="grey-text">Ton sexe?</label><br>
+                            <div id="sexField" class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input value="Male" hidden type="radio" name="sex" checked>
+                                    <i class="fas fa-male"></i> Homme
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input value="Female" hidden type="radio" name="sex">
+                                    <i class="fas fa-female"></i> Femme
+                                </label>
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <!-- Happiness -->
+                            <label for="happinessField" class="grey-text">Es-tu heureux?</label><br>
+                            <div id="happinessField" class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input value="1" hidden type="radio" name="happiness" checked>
+                                    <i class="far fa-frown"></i>Malheureux
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input value="2" hidden type="radio" name="happiness">
+                                    <i class="far fa-meh"></i> Plutot Malheureux
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input value="3" hidden type="radio" name="happiness">
+                                    <i class="fas fa-meh"></i> Plutot Heureux
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input value="4" hidden type="radio" name="happiness">
+                                    <i class="far fa-smile"></i> Heureux
+                                </label>
+                            </div>
+                            <br>
+                            <br>
+
+                            <!-- Sport -->
+                            <label for="sportField" class="grey-text">Fais-tu du sport?</label><br>
+                            <div id="sportField" class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input value="false" hidden type="radio" name="sport" checked>
+                                    <i class="fas fa-cancel"></i>Non
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input value="true" hidden type="radio" name="sport">
+                                    <i class="fas fa-check"></i>Oui
+                                </label>
+                            </div>
+
+                            <br>
+                            <br>
+
+
+                            <!-- Disease -->
+                            <label for="disease_field" class="grey-text">Nombre de Maldies chroniques dans ton
+                                foyer?</label>
+                            <input type="number" required pattern="[0-9]" min="0" max="10" name="disease" id="disease_field"
+                                   class="form-control">
+
+                            <div class="text-center mt-4">
+                                <button class="btn btn-outline-warning" type="submit">Ajouter mes stats<i
+                                        class="fa fa-paper-plane-o ml-2"></i></button>
+                            </div>
+                        </form>
+                        <!-- Default form contact -->
+
+                        <!-- Material form register -->
+
+                    </div>
+                    <!-- Card body -->
+
+                </div>
+                <!-- Card -->
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-5 bg-black">
+    <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Material Design Bootstrap -->
+<link href="css/mdb.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+
+</body>
+
+</html>
