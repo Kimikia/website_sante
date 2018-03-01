@@ -6,7 +6,7 @@ include "db.php";
 
 $query = "SELECT T.`Trés malheureux` as 'happiness' , T.percentage
 FROM(
-SELECT 'Trés malheureux ' ,COUNT( CASE WHEN happiness = 1 THEN 1 END) * 100.0 / COUNT(*) AS 'percentage'  
+SELECT 'Trés malheureux' ,COUNT( CASE WHEN happiness = 1 THEN 1 END) * 100.0 / COUNT(*) AS 'percentage'  
 FROM person
 
 UNION
